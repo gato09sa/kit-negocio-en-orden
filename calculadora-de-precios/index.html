@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de precio de venta y margen de ganancia (gratis)</title>
+<meta name="description" content="Calcula gratis a qué precio vender tu producto según tu costo, comisiones, impuestos y el margen que quieres ganar.">
+<meta property="og:title" content="Calculadora de precio de venta y margen de ganancia (gratis)">
+<meta property="og:description" content="Calcula gratis a qué precio vender tu producto según tu costo, comisiones, impuestos y el margen que quieres ganar.">
+<meta property="og:image" content="https://gato09sa.github.io/kit-negocio-en-orden/img/portada.png">
+<style>
+:root{--dark:#14404F;--acc:#F2A541;--ink:#22323a;--mut:#5b6b73;--bg:#f6f8f9;--line:#dbe3e6}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+header{background:var(--dark);color:#fff;padding:56px 0 0;overflow:hidden}
+.tag{color:var(--acc);font-weight:700;letter-spacing:.14em;font-size:13px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:14px 0 18px;font-weight:800;text-wrap:balance}
+.lead{font-size:clamp(17px,2.4vw,21px);color:#d5e2e6;max-width:640px;margin:0 0 28px}
+.cta{display:inline-block;background:var(--acc);color:var(--dark);font-weight:800;font-size:18px;padding:16px 30px;border-radius:10px;text-decoration:none;transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.sub{font-size:14px;color:#b9cdd3;margin:12px 0 0}
+.hero-img{display:block;width:100%;max-width:920px;margin:44px auto 0;border-radius:10px 10px 0 0;border:4px solid #fff;border-bottom:0;box-shadow:0 -10px 40px rgba(0,0,0,.3)}
+section{padding:64px 0}
+section.alt{background:var(--bg)}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.15;color:var(--dark);margin:0 0 14px;text-wrap:balance}
+.intro{color:var(--mut);max-width:680px;margin:0 0 34px;font-size:18px}
+.pains{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding:0;margin:0;list-style:none}
+.pains li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:16px 18px;font-weight:500}
+.item{display:grid;grid-template-columns:1fr 1.25fr;gap:36px;align-items:center;margin:0 0 56px}
+.item:nth-child(even) .txt{order:2}
+.item img{width:100%;border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 28px rgba(20,64,79,.12)}
+.item img.tall{max-width:360px;justify-self:center}
+.n{color:var(--acc);font-weight:800;font-size:15px;letter-spacing:.1em}
+h3{font-size:24px;margin:4px 0 8px;color:var(--dark)}
+.item ul{padding-left:20px;margin:10px 0 0;color:var(--mut)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px}
+.step b{display:block;font-size:18px;color:var(--dark);margin-bottom:6px}
+.offer{background:var(--dark);color:#fff;border-radius:16px;padding:44px 32px;text-align:center}
+.offer h2{color:#fff}
+.offer ul{list-style:none;padding:0;margin:22px auto 28px;max-width:460px;text-align:left}
+.offer li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid #2d5a6a}
+.offer li::before{content:"✓";position:absolute;left:0;color:var(--acc);font-weight:800}
+.price{font-size:54px;font-weight:800;line-height:1;margin:6px 0 4px}
+.price small{font-size:18px;font-weight:500;color:#b9cdd3}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:700;cursor:pointer;font-size:17px;color:var(--dark)}
+details p{color:var(--mut);margin:10px 0 0}
+footer{padding:30px 0 50px;color:var(--mut);font-size:13px;text-align:center}
+@media(max-width:760px){.item{grid-template-columns:1fr;gap:16px}.item:nth-child(even) .txt{order:0}section{padding:44px 0}}
+.usos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.nichos{margin:0 0 18px;line-height:2}
+.nichos a{color:var(--dark);margin:0 8px;white-space:nowrap}
+</style>
+<link rel="canonical" href="https://gato09sa.github.io/kit-negocio-en-orden/calculadora-de-precios/">
+</head>
+<body>
+
+<header style="padding-bottom:48px">
+  <div class="w">
+    <div class="tag">HERRAMIENTA GRATUITA</div>
+    <h1>Calculadora de precio de venta y margen</h1>
+    <p class="lead">Pon tu costo y la ganancia que quieres. Te dice a cuánto vender y cuánto ganas de verdad con tu precio actual.</p>
+  </div>
+</header>
+
+<section>
+  <div class="w" style="max-width:760px">
+    <style>
+    .calc{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px}
+    .calc label{display:block;font-weight:600;font-size:15px;color:var(--dark)}
+    .calc input{width:100%;margin-top:4px;padding:11px 12px;font-size:17px;border:1px solid var(--line);border-radius:8px;background:#fffbe6}
+    .res{margin-top:24px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:20px}
+    .res div{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid var(--line)}
+    .res div:last-child{border:0}
+    .res b{color:var(--dark);font-size:18px;white-space:nowrap}
+    .res .big b{font-size:28px}
+    .warn{color:#b3261e;font-weight:600;margin-top:12px}
+    @media(max-width:560px){.calc{grid-template-columns:1fr}}
+    </style>
+    <h2>Calcula tu precio de venta</h2>
+    <p class="intro">Llena las casillas amarillas. Usa punto o coma para los decimales.</p>
+    <div class="calc">
+      <label>Costo del producto (por unidad)<input id="costo" inputmode="decimal" value="10"></label>
+      <label>Otros costos por unidad (empaque, envío)<input id="otros" inputmode="decimal" value="0"></label>
+      <label>Comisión de tarjeta o plataforma (%)<input id="comision" inputmode="decimal" value="0"></label>
+      <label>Impuesto que cobras sobre la venta (%)<input id="impuesto" inputmode="decimal" value="0"></label>
+      <label>Margen de ganancia que quieres (%)<input id="margen" inputmode="decimal" value="30"></label>
+      <label>Precio al que vendes hoy (opcional)<input id="actual" inputmode="decimal" value="15"></label>
+    </div>
+    <div class="res" id="res" aria-live="polite"></div>
+    <p class="warn" id="warn"></p>
+
+    <h2 style="margin-top:48px">Por qué sumar 50% al costo no te deja 50% de ganancia</h2>
+    <p>Si algo te cuesta 10 y le sumas 50%, vendes a 15 y ganas 5. Pero 5 sobre 15 es 33%, no 50%. Lo que sumaste al costo se llama <b>recargo</b>; lo que te queda de cada venta se llama <b>margen</b>. Para un margen de 50% sobre un costo de 10 tendrías que vender a 20.</p>
+    <p>La fórmula que usa esta calculadora: <b>precio = costo total ÷ (1 − margen − comisión)</b>, y sobre ese precio se suma el impuesto. La comisión se descuenta del precio porque la pasarela la cobra sobre lo que paga el cliente.</p>
+    <p>Esta calculadora es una herramienta de referencia: confirma con tu contador qué impuestos aplican a tu negocio.</p>
+  </div>
+</section>
+<script>
+(function(){
+  var ids=["costo","otros","comision","impuesto","margen","actual"];
+  function num(id){var v=parseFloat(String(document.getElementById(id).value).replace(",", "."));return isFinite(v)?v:0;}
+  function f(n){return n.toLocaleString("es",{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function row(t,v,big){return '<div'+(big?' class="big"':'')+'><span>'+t+'</span><b>'+v+'</b></div>';}
+  function calc(){
+    var costo=num("costo")+num("otros"),com=num("comision")/100,imp=num("impuesto")/100,mar=num("margen")/100,act=num("actual");
+    var out="",warn="";
+    if(mar+com>=1){warn="El margen más la comisión no pueden llegar a 100%.";}
+    else if(costo>0){
+      var neto=costo/(1-mar-com),fin=neto*(1+imp);
+      out+=row("Precio de venta sugerido",f(fin),true);
+      if(imp>0)out+=row("Precio antes de impuesto",f(neto));
+      out+=row("Ganancia por unidad",f(neto*mar));
+      out+=row("Recargo sobre el costo",f((neto/costo-1)*100)+" %");
+    }
+    if(act>0&&costo>0){
+      var n2=act/(1+imp),g=n2-costo-n2*com,m=g/n2*100;
+      out+=row("Con tu precio actual ganas por unidad",f(g));
+      out+=row("Tu margen real hoy",f(m)+" %");
+      if(g<0)warn="Con tu precio actual pierdes dinero en cada venta.";
+    }
+    document.getElementById("res").innerHTML=out||row("Ingresa tu costo para ver el resultado","");
+    document.getElementById("warn").textContent=warn;
+  }
+  ids.forEach(function(id){document.getElementById(id).addEventListener("input",calc);});
+  calc();
+})();
+</script>
+<section class="alt">
+  <div class="w">
+    <div class="offer">
+      <div class="tag">KIT NEGOCIO EN ORDEN</div>
+      <h2 style="margin-top:10px">Esta calculadora y 5 plantillas más, en Excel</h2>
+      <ul>
+        <li>Control de Ventas con ganancia y margen por mes</li>
+        <li>Inventario con alertas de reposición</li>
+        <li>Flujo de Caja mes a mes</li>
+        <li>Calculadora de Precios y Punto de Equilibrio</li>
+        <li>Cotizador Profesional</li>
+        <li>Cuentas por Cobrar y Pagar</li>
+      </ul>
+      <div class="price">US$ 9,90 <small>pago único</small></div>
+      <p class="sub" style="margin-bottom:22px">6 plantillas Excel + guía en PDF. Garantía de 7 días.</p>
+      <a class="cta" href="https://pay.hotmart.com/V108462530Y?src=calculadora">Quiero el kit completo</a>
+      <p class="sub"><a href="../" style="color:#b9cdd3">Ver todo lo que incluye</a></p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="w"><!--NICHOS--><div class="nichos"><a href="../">Kit completo</a> · <a href="../tienda-de-abarrotes/">Tiendas, bodegas y minimarkets</a> · <a href="../tienda-de-ropa/">Tiendas de ropa y calzado</a> · <a href="../restaurante-y-comida/">Restaurantes y negocios de comida</a> · <a href="../reposteria-y-panaderia/">Repostería y panadería</a> · <a href="../ferreteria/">Ferreterías y repuestos</a> · <a href="../salon-de-belleza/">Salones de belleza y barberías</a> · <a href="../ventas-por-redes-sociales/">Venta por redes sociales y catálogo</a> · <a href="../servicios-y-talleres/">Servicios técnicos, talleres e independientes</a> · <a href="../calculadora-de-precios/">Calculadora de precios gratis</a> · <a href="../cotizador-gratis/">Cotizador gratis</a></div><!--/NICHOS-->Kit Negocio en Orden · Producto digital, no se envía nada físico. Los resultados dependen del uso que le des a las plantillas.</div></footer>
+</body>
+</html>
